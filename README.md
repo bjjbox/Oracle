@@ -8,4 +8,4 @@ where d.department_id = e.department_id
 and d.department_name in ('IT'，'Sales')
 GROUP BY department_name;
 ### 结果
-![第一条结果](users/addison/下载/QQ20181017-0.png)
+![第一条结果](.\result1)
