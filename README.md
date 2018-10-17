@@ -8,4 +8,4 @@ where d.department_id = e.department_id
 and d.department_name in ('IT'，'Sales')
 GROUP BY department_name;
 ### 结果
-![第一条结果](.\result1)
+![第一条结果](https://github.com/bjjbox/Oracle/tree/master/test1/result1.png)
