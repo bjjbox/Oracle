@@ -127,7 +127,8 @@ PCTFREE 10
 NOCOMPRESS NO INMEMORY
 );
 ### 表创建情况
+![]()
 ### 分区权限
-
+![]()
 
 
