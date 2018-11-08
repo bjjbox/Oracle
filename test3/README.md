@@ -127,8 +127,9 @@ PCTFREE 10
 NOCOMPRESS NO INMEMORY
 );
 ### 表创建情况
-![]()
+![](https://github.com/bjjbox/Oracle/blob/master/test3/image/表分区.png)
 ### 分区权限
-![]()
+![](https://github.com/bjjbox/Oracle/blob/master/test3/image/权限.png)
+
 
 
