@@ -6,13 +6,20 @@ ALTER USER bjjbox QUOTA UNLIMITED ON USERS02;
 ALTER USER bjjbox QUOTA UNLIMITED ON USERS03;
 ALTER USER bjjbox ACCOUNT UNLOCK;
 ### 3:分配权限
-GRANT "CONNECT" TO xiaoqingyu WITH ADMIN OPTION;
-GRANT "RESOURCE" TO xiaoqingyu WITH ADMIN OPTION;
+GRANT "CONNECT" TO bjjbox WITH ADMIN OPTION;
+GRANT "RESOURCE" TO bjjbox WITH ADMIN OPTION;
 ALTER USER bjjbox DEFAULT ROLE "CONNECT","RESOURCE";
 ### 4:系统权限
-GRANT CREATE VIEW TO xiaoqingyu WITH ADMIN OPTION;
+GRANT CREATE VIEW TO bjjbox WITH ADMIN OPTION;
 ### 5:添加实验所需表和相应触发器、序列、视图
-
+1:表<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test4/image/表.png)<br>
+2:触发器<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test4/image/触发器创建.png)<br>
+3:序列<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test4/image/序列的创建.png)<br>
+4:视图<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test4/image/视图.png)<br>
 ### 6:插入初始化数据
 INSERT INTO bjjbox.DEPARTMENTS(DEPARTMENT_ID,DEPARTMENT_NAME) values (1,'总经办');
 INSERT INTO bjjbox.EMPLOYEES(EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID)
