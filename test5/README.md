@@ -5,7 +5,7 @@ create or replace PACKAGE MyPack IS
   FUNCTION Get_SaleAmount(V_DEPARTMENT_ID NUMBER) RETURN NUMBER;
   PROCEDURE Get_Employees(V_EMPLOYEE_ID NUMBER);
 END MyPack;
-### 创建函数及过程
+### 创建函数
 create or replace PACKAGE BODY MyPack IS
   FUNCTION Get_SaleAmount(V_DEPARTMENT_ID NUMBER) RETURN NUMBER
   AS
@@ -30,7 +30,7 @@ create or replace PACKAGE BODY MyPack IS
       END LOOP;
     END;
 END MyPack;
-### 调用函数及过程
+### 调用函数
 select count(*) from orders;
 select MyPack.Get_SaleAmount(11) AS 部门11应收金额,MyPack.Get_SaleAmount(12) AS 部门12应收金额 from dual;
 set serveroutput on
