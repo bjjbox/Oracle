@@ -30,6 +30,8 @@ create or replace PACKAGE BODY MyPack IS
       END LOOP;
     END;
 END MyPack;
+### 结果
+!()[https://github.com/bjjbox/Oracle/blob/master/test5/image/创建函数.png]<br>
 ### 调用函数
 select count(*) from orders;
 select MyPack.Get_SaleAmount(11) AS 部门11应收金额,MyPack.Get_SaleAmount(12) AS 部门12应收金额 from dual;
