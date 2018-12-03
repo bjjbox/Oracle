@@ -175,7 +175,7 @@ select count(*) from orders a,order_details b where a.order_id=b.order_id;<br>
 ### 查询匹配数据<br>
 select * from orders a INNER JOIN order_details b ON (a.order_id=b.order_id);
 ### 结果<br>
-![](https://github.com/bjjbox/Oracle/blob/master/test3/image/权限.png)<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test3/image/2.png)<br>
 ### 总结<br>
 对于整个查询语句来说，使用的访问方式内嵌套循环，故效率较高。
 同时，使用的内存较小，花费资源较少。
