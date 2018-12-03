@@ -165,5 +165,15 @@ begin
       insert  into ORDER_DETAILS (ID,ORDER_ID,PRODUCT_ID,PRODUCT_NUM,PRODUCT_PRICE)
       values (v_order_id,v_order_id,v_product_id,dbms_random.value(1000,0),dbms_random.value(100,0));
   end loop;
-end;
+end;<br>
+### 循环插入，使用for in 循环<br>
+<br>
+### 查询数据匹配条数<br>
+select count(*) from orders a,order_details b where a.order_id=b.order_id;<br>
+查询两张表中相匹配数据的条数，因为插入数据时两张表是同时插入，order_details表中的order_id即为当时的orders表的id,
+则查询出数据为1万条
+### 查询匹配数据<br>
+select * from orders a INNER JOIN order_details b ON (a.order_id=b.order_id);
+### 结果<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test3/image/权限.png)<br>
 
