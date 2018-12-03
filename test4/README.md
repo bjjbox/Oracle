@@ -104,3 +104,21 @@ begin
     END IF;
   end loop;
 end;
+### 插入结果<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test4/image/批量插入订单数据.png)<br>
+### 查询单条数据
+select * from bjjbox.ORDERS where  order_id=10001;
+select * from bjjbox.ORDER_DETAILS where  order_id=10001;
+select * from bjjbox.VIEW_ORDER_DETAILS where order_id=10001;
+### 递归查询员工及其下级员工
+WITH A (EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID) AS
+  (SELECT EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTMENT_ID
+    FROM bjjbox.employees WHERE employee_ID = 11
+    UNION ALL
+  SELECT B.EMPLOYEE_ID,B.NAME,B.EMAIL,B.PHONE_NUMBER,B.HIRE_DATE,B.SALARY,B.MANAGER_ID,B.DEPARTMENT_ID
+    FROM A, bjjbox.employees B WHERE A.EMPLOYEE_ID = B.MANAGER_ID)
+SELECT * FROM A;
+--或
+SELECT * FROM employees START WITH EMPLOYEE_ID = 11 CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID;
+### 结果<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test4/image/递归查询员工.png)<br>
