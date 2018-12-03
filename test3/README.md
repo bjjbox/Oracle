@@ -1,4 +1,6 @@
-## 用户名bjjbox
+## 用户
+用户名：bjjbox<br>
+密。码：123<br>
 ### 创建表 order
 CREATE TABLE orders 
  (
