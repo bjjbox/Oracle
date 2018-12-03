@@ -126,10 +126,13 @@ PCTFREE 10
 )
 NOCOMPRESS NO INMEMORY
 );
-### 表创建情况
-![](https://github.com/bjjbox/Oracle/blob/master/test3/image/表分区.png)
-### 分区权限
-![](https://github.com/bjjbox/Oracle/blob/master/test3/image/权限.png)
+### 表创建情况<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test3/image/表分区.png)<br>
+### 分配权限<br>
+分配查询权限<br>
+![](https://github.com/bjjbox/Oracle/blob/master/test3/image/权限.png)<br>
+分配表空间权限<br>
+grant UNLIMITED TABLESPACE to bjjbox;<br>
 ### 插入语句
 declare
   dt date;
