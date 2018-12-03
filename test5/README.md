@@ -1,5 +1,6 @@
 ### 用户
-bjjbox
+用户名：bjjbox
+密  码：123
 ### 创建包
 create or replace PACKAGE MyPack IS
   FUNCTION Get_SaleAmount(V_DEPARTMENT_ID NUMBER) RETURN NUMBER;
@@ -46,3 +47,5 @@ BEGIN
 END;
 ### 结果<br>
 ![](https://github.com/bjjbox/Oracle/blob/master/test5/image/测试.png)<br>
+### 优化
+对表日期字段建立索引可减少统计时的数据查询时间，可减少统计时间。
